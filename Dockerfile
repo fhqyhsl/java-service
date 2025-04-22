@@ -20,5 +20,5 @@ FROM openjdk:17-slim
 ARG JAR_FILE=/usr/app/target/*.jar
 COPY --from=build $JAR_FILE /app/runner.jar
 
-EXPOSE 8082
+EXPOSE 8081
 ENTRYPOINT ["java", "-jar", "/app/runner.jar"]
